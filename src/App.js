@@ -7,18 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 function App() {
-  const [todo, setTodo] = useState([
-    {
-      id: 1,
-      text: "Kitob oqish",
-      isComplate: false,
-    },
-    {
-      id: 2,
-      text: "Code yozish",
-      isComplate: false,
-    },
-  ]);
+  const [todo, setTodo] = useState([]);
   const inputValue = useRef();
 
   const handleFormSubmit = (evt) => {
