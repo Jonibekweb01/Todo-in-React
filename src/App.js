@@ -5,6 +5,7 @@ import ListItem from "./components/ListItem/ListItem";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+
 function App() {
   const [todo, setTodo] = useState([
     {
@@ -15,7 +16,7 @@ function App() {
     {
       id: 2,
       text: "Code yozish",
-      isComplate: true,
+      isComplate: false,
     },
   ]);
   const inputValue = useRef();
@@ -36,12 +37,12 @@ function App() {
   return (
     <>
       <div className="container">
-        <h1 className="display-2 fw-bold text-center mb-3 mt-3">TODO APP</h1>
+        <h1 className="display-2 fw-bold text-center mb-3 mt-3 text-primary">TODO</h1>
         <div className="w-50 mx-auto">
-          <form onSubmit={handleFormSubmit} className="p-5 shadow mb-5">
+          <form onSubmit={handleFormSubmit} className="bg-primary rounded p-5 shadow mb-5">
             <div className="input-group">
               <input ref={inputValue} className="form-control" type={"text"} placeholder="Todo..."></input>
-              <button type="submit" className="btn btn-primary">Submit</button>
+              <button type="submit" className="btn btn-warning">Submit</button>
             </div>
           </form>
           <List>
